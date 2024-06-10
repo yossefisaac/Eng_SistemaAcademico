@@ -83,6 +83,9 @@ public class Main {
         controleAcademico.removerAlunoDaTurma(aluno2, turmaFisica);
 
         // Mostrar lista de alunos em uma turma
+        System.out.println();
+        System.out.println("****************************************************************************************************************************");
+        System.out.println();
         System.out.println("Alunos na turma de Matemática:");
         turmaMatematica.mostrarTurmaAlunos();
 

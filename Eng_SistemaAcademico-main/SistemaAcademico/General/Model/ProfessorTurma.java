@@ -59,7 +59,6 @@ public class ProfessorTurma {
     }
 
     // Getters e Setters com validação
-
     public Professor getProfessor() {
         return professor;
     }

@@ -154,6 +154,7 @@ public class Aluno {
         return somaDasFrequencias / quantidadeDeFrequencias;
     }
 
+    // Placeholder para o método getAlunoTurma
     public Aluno getAlunoTurma(Turma turma) {
         // Implementação necessária se for utilizado em algum contexto
         throw new UnsupportedOperationException("Unimplemented method 'getAlunoTurma'");

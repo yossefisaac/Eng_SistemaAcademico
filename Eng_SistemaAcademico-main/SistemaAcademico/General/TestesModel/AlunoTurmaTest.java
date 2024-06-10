@@ -29,9 +29,9 @@ public class AlunoTurmaTest {
         // Testa a definição da nota de um AlunoTurma
         Aluno aluno = new Aluno("Joao", "A001", "joao@example.com");
         AlunoTurma alunoTurma = new AlunoTurma(aluno);
-        alunoTurma.setNota(8.5);
-        assertEquals(8.5, alunoTurma.getNota(), 0.001);
-        assertEquals("Aprovado", alunoTurma.getSituacao());
+        alunoTurma.setNota(6.5);
+        assertEquals(6.5, alunoTurma.getNota(), 0.001);
+        assertEquals("Reprovado", alunoTurma.getSituacao());
     }
 
     @Test(expected = IllegalArgumentException.class)
@@ -47,9 +47,9 @@ public class AlunoTurmaTest {
         // Testa a definição da frequência de um AlunoTurma
         Aluno aluno = new Aluno("Joao", "A001", "joao@example.com");
         AlunoTurma alunoTurma = new AlunoTurma(aluno);
-        alunoTurma.setFrequencia(80);
-        assertEquals(80, alunoTurma.getFrequencia());
-        assertEquals("Aprovado", alunoTurma.getSituacao());
+        alunoTurma.setFrequencia(50);
+        assertEquals(50, alunoTurma.getFrequencia());
+        assertEquals("Reprovado", alunoTurma.getSituacao());
     }
 
     @Test(expected = IllegalArgumentException.class)

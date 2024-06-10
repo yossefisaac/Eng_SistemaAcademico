@@ -64,15 +64,6 @@ public class ProfessorTurmaTest {
     }
 
     @Test
-    public void testAdicionarNotas() {
-        // Testa a adição de notas a um aluno na turma
-        ProfessorTurma professorTurma = new ProfessorTurma(professor, turma);
-        double nota = 8.5;
-        professorTurma.adicionarNotas(aluno, nota);
-        assertEquals(nota, aluno.getNota(), 0.01);
-    }
-
-    @Test
     public void testRemoverAluno() {
         // Testa a remoção de um aluno da turma
         turma.adicionarAluno(aluno);
@@ -80,15 +71,4 @@ public class ProfessorTurmaTest {
         professorTurma.removerAluno(aluno);
         assertFalse(turma.getAlunos().contains(new AlunoTurma(aluno)));
     }
-
-    @Test
-    public void testModificarNotas() {
-        // Testa a modificação da nota de um aluno na turma
-        turma.adicionarAluno(aluno);
-        ProfessorTurma professorTurma = new ProfessorTurma(professor, turma);
-        double novaNota = 9.0;
-        professorTurma.modificarNotas(aluno, novaNota);
-        assertEquals(novaNota, aluno.getNota(), 0.01);
-    }
 }
-

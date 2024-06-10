@@ -10,14 +10,11 @@ public class AlunoTurma {
 
     // Construtor para inicializar AlunoTurma com um Aluno
     public AlunoTurma(Aluno aluno) {
-        if (aluno == null) {
-            throw new IllegalArgumentException("Aluno não pode ser nulo.");
-        }
-        this.aluno = aluno;
+        setAluno(aluno);
         this.situacao = "Indefinido"; // Situação inicial
     }
 
-    // Método para buscar uma turma pelo código na lista de turmas
+    // Método estático para buscar uma turma pelo código na lista de turmas
     public static Turma buscarTurma(List<Turma> listaTurmas, String codigo) {
         for (Turma turma : listaTurmas) {
             if (turma.getCodigo().equals(codigo)) {
@@ -69,7 +66,7 @@ public class AlunoTurma {
         return situacao;
     }
 
-    // Método para atualizar a situação do aluno na turma
+    // Método privado para atualizar a situação do aluno na turma
     private void atualizarSituacao() {
         if (nota >= 7.0 && frequencia >= 70) {
             this.situacao = "Aprovado";
